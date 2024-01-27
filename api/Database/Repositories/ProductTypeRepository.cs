@@ -9,7 +9,7 @@ public class ProductTypeRepository : BaseRepository<ProductTypeModel>, IProductT
     }
 }
 
-public interface IProductTypeRepository : IBase<ProductTypeModel>
+public interface IProductTypeRepository : IRepository<ProductTypeModel>
 {
 
 }

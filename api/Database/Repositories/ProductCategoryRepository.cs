@@ -8,7 +8,7 @@ public class ProductCategoryRepository : BaseRepository<ProductCategoryModel>, I
     }
 }
 
-public interface IProductCategoryRepository : IBase<ProductCategoryModel>
+public interface IProductCategoryRepository : IRepository<ProductCategoryModel>
 {
 
 }

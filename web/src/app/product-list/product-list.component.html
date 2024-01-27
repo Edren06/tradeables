@@ -266,8 +266,8 @@
                 <h3 class="widget-title">Categories</h3>
                 <ul class="prouduct-categories product-widget__list">
                     <li *ngFor="let category of productCategories">
-                        <a href="">{{ category.name }}</a>
-                        <span class="count">(0)</span>
+                        <a href="">{{ category.CategoryName }}</a>
+                        <span class="count">({{ category.ProductCount }})</span>
                       </li>
                 </ul>
             </div>

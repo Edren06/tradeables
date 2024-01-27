@@ -18,7 +18,7 @@ export class ProductListComponent {
     // Use forkJoin to make parallel API calls
     forkJoin([
       this.dataService.getData('Product'),
-      this.dataService.getData('ProductCategory')
+      this.dataService.getData('Product/grouped-with-count')
     ]).subscribe({
       next: (responses) => {
         this.products = responses[0];

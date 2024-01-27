@@ -1,4 +1,5 @@
 using Api.Database;
+using Api.Database.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -6,21 +7,16 @@ namespace Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ProductCategoryController : ControllerBase
+    public class ProductCategoryController : BaseController<ProductCategoryModel, IProductCategoryService>
     {
-        private readonly IProductCategoryRepository _productCategoryRepository;
-
-        public ProductCategoryController(IProductCategoryRepository productCategoryRepository)
+        public ProductCategoryController(IProductCategoryService productCategoryService) : base(productCategoryService)
         {
-            _productCategoryRepository = productCategoryRepository;
         }
-        
-        [HttpGet]
-        public IActionResult Get() 
-        {
-            var productCategories = _productCategoryRepository.GetAll();
 
-            return Ok(productCategories);
+        // Implement the abstract method to get the entity id
+        protected override int GetEntityId(ProductCategoryModel entity)
+        {
+            return entity.Id;
         }
     }
 }

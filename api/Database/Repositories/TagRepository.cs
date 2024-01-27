@@ -8,7 +8,7 @@ public class TagRepository : BaseRepository<TagModel>, ITagRepository
     }
 }
 
-public interface ITagRepository : IBase<TagModel>
+public interface ITagRepository : IRepository<TagModel>
 {
 
 }

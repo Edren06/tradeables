@@ -1,4 +1,5 @@
 using Api.Database;
+using Api.Database.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -6,21 +7,24 @@ namespace Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ProductController : ControllerBase
+    public class ProductController : BaseController<ProductModel, IProductService>
     {
-        private readonly IProductRepository _productRepository;
-
-        public ProductController(IProductRepository productRepository)
+        public ProductController(IProductService productService) : base(productService)
         {
-            _productRepository = productRepository;
         }
-        
-        [HttpGet]
-        public IActionResult Get() 
-        {
-            var products = _productRepository.GetAll();
 
-            return Ok(products);
+        // Implement the abstract method to get the entity id
+        protected override int GetEntityId(ProductModel entity)
+        {
+            return entity.Id;
+        }
+
+        // Get products grouped by category with count
+        [HttpGet("grouped-with-count")]
+        public IActionResult GetGroupedWithCount()
+        {
+            var productsWithCount = _service.GetProductsGroupedByCategoryWithCount();
+            return Ok(productsWithCount);
         }
     }
 }

@@ -8,7 +8,7 @@ public class UserTypeRepository : BaseRepository<UserTypeModel>, IUserTypeReposi
     }
 }
 
-public interface IUserTypeRepository : IBase<UserTypeModel>
+public interface IUserTypeRepository : IRepository<UserTypeModel>
 {
 
 }

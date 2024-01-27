@@ -1,7 +1,19 @@
 using Api.Database;
 using Microsoft.EntityFrameworkCore;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
-public class BaseRepository<TEntity> where TEntity : class
+public interface IRepository<TEntity> where TEntity : class
+{
+    IEnumerable<TEntity> GetAll();
+    TEntity? GetById(int id);
+    void Add(TEntity entity);
+    void Update(TEntity entity);
+    void Delete(int id);
+}
+
+public class BaseRepository<TEntity> : IRepository<TEntity> where TEntity : class
 {
     protected readonly AppDbContext _context;
     protected readonly DbSet<TEntity> _dbSet;
@@ -44,3 +56,4 @@ public class BaseRepository<TEntity> where TEntity : class
         }
     }
 }
+

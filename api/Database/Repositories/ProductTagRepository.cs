@@ -8,7 +8,7 @@ public class ProductTagRepository : BaseRepository<ProductTagModel>, IProductTag
     }
 }
 
-public interface IProductTagRepository : IBase<ProductTagModel>
+public interface IProductTagRepository : IRepository<ProductTagModel>
 {
 
 }
