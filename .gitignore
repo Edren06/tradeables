@@ -1,0 +1,208 @@
+# Node.js dependencies
+node_modules/
+
+# Compiled output
+dist/
+
+# Log files
+logs/
+
+# Compiled TypeScript
+*.js
+*.js.map
+
+# Temporary files
+*.tmp
+
+# IDE-specific files
+.vscode/
+.idea/
+
+# Dependency lock file
+yarn.lock
+
+# Angular generated files
+.angular-cli.json
+.angular/
+
+# Angular testing files
+karma.conf.js
+protractor.conf.js
+
+# Local environment files
+src/environments/*.local.ts
+
+
+# .NET artifacts
+bin/
+obj/
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.suo
+*.user
+
+# Rider
+.idea/
+
+# Visual Studio Code
+.vscode/
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.suo
+*.user
+
+# Rider
+.idea/
+
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.suo
+*.user
+*.userosscache
+*.suo
+*.user
+*.userosscache
+*.suo
+*.user
+*.suo
+*.user
+*.userosscache
+*.suo
+*.user
+*.suo
+*.user
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# VS Code directories
+.vscode/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
+
+# JetBrains Rider
+.idea/
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.suo
+*.user
+
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.suo
+*.user
+*.userosscache
+*.suo
+*.user
+*.userosscache
+*.suo
+*.user
+*.suo
+*.user
+*.userosscache
+*.suo
+*.user
+*.suo
+*.user
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# VS Code directories
+.vscode/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
+
+# JetBrains Rider
+.idea/
+*.suo
+*.user
+*.userosscache
+*.suo
+*.user
+
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.suo
+*.user
+*.userosscache
+*.suo
+*.user
+*.userosscache
+*.suo
+*.user
+*.suo
+*.user
+*.userosscache
+*.suo
+*.user
+*.suo
+*.user
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# VS Code directories
+.vscode/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
+
+# JetBrains Rider
+.idea/
