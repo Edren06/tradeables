@@ -15,7 +15,6 @@ export class ProductListComponent {
   constructor(private dataService: DataService) { }
 
   ngOnInit(): void {
-    // Use forkJoin to make parallel API calls
     forkJoin([
       this.dataService.getData('Product'),
       this.dataService.getData('Product/grouped-with-count')
@@ -23,9 +22,6 @@ export class ProductListComponent {
       next: (responses) => {
         this.products = responses[0];
         this.productCategories = responses[1];
-        
-        console.log('Products:', this.products);
-        console.log('Product Categories:', this.productCategories);
       },
       error: (err) => {
         console.error(err);

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -10,8 +10,28 @@ export class DataService {
 
   constructor(private http: HttpClient) { }
 
-  getData(path:string): Observable<any> {
+  getData(path: string, queryParams?: any): Observable<any> {
+    const url = `${this.apiUrl}/api/${path}`;
+    const options = {
+      params: queryParams
+    };
+
+    return this.http.get<any>(url, options);
+  }
+
+  postData(path: string, body: any): Observable<any> {
+    const url = `${this.apiUrl}/api/${path}`;
+    const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
+
     console.log("Test");
-    return this.http.get<any>(`${this.apiUrl}/api/${path}`);
+    return this.http.post<any>(url, body, { headers });
+  }
+
+  putData(path: string, body: any): Observable<any> {
+    const url = `${this.apiUrl}/api/${path}`;
+    const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
+
+    console.log("Test");
+    return this.http.put<any>(url, body, { headers });
   }
 }
